@@ -1,6 +1,6 @@
 <?php
 
-include_once('itemss_db.php');
+include_once('items_db.php');
 
 function test_input($data){
     $data = trim($data);
