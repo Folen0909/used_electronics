@@ -1,14 +1,14 @@
 <?php
 
-if (file_exists("./items_db.php")) {
-    include_once("./items_db.php");
-}
+    if (!isset($_COOKIE['Admin'])){
+        header("Location: admin.php");
+    }
 
-if (!isset($_COOKIE['Admin'])){
-    header("Location: admin.php");
-}
+    if (file_exists("./items_db.php")) {
+        include_once("./items_db.php");
+    }
 
-$items = $items_table->read();
+    $items = $items_table->read();
 
 ?>
 
@@ -36,8 +36,8 @@ $items = $items_table->read();
             <h1>Items</h1>
             <div class="title">
                 <span>Items</span>
-                <input class="addbtn" type="button" value="New Item"
-                    onClick="document.location.href = './new_item.php'" />
+                <button class="addbtn" type="button" value="New item"
+                    onClick="document.location.href = './new_item.php'">New item</button>
             </div>
 
             <table class="table">

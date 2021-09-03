@@ -55,17 +55,16 @@
                 <p>
                     <label for="text">Name: </label>
                     <input class="textinput" id="edit_input" type="text" name="service_name" id="service_name" 
-                    value="<?php echo $service_name?>">
+                    value="<?php echo $service_name?>" required>
                 </p>
                 <p>
                     <label for="number">Price: </label>
                     <input class="textinput" id="edit_input" type="number" name="service_price" id="service_price"
-                        value="<?php echo $service_price?>">
+                        value="<?php echo $service_price?>" required>
                 </p>
-                <input class="addbtn" name='update' value="Edit" type="submit">
-                <input class="addbtn" name='delete' value="Delete" type="submit">
+                <button class="addbtn" name='update' value="Edit" type="submit">Edit</button>
+                <button class="addbtn" name='delete' value="Delete" type="submit">Delete</button>
             </form>
         </section>
     </body>
-
 </html>

@@ -36,15 +36,15 @@
                 <p>
                     <label for="text">Name: </label>
                     <input class="textinput" type="text" name="service_name" id="service_name" 
-                        placeholder="Name">
+                        placeholder="Name" required>
                 </p>
                 <p>
                     <label for="number">Price: </label>
                     <input class="textinput" type="number" name="service_price" id="service_price"
-                        placeholder="Price">
+                        placeholder="Price" required>
                 </p>
 
-                <input class="addbtn" type="submit" value="Add new service">
+                <button class="addbtn" type="submit" value="Add new service">Add new service</button>
         
             </form>
         </section>

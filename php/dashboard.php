@@ -1,7 +1,9 @@
 <?php
-    if(!isset($_COOKIE['Admin'])){
+
+    if (!isset($_COOKIE['Admin'])){
         header("Location: admin.php");
     }
+
 ?>
 
 <!DOCTYPE html>

@@ -1,3 +1,11 @@
+<?php
+
+    if (isSet($_COOKIE["Admin"])) {
+        header('Location: dashboard.php');
+    }
+
+?>
+
 <!DOCTYPE html>
 <html land="en">
 
@@ -6,7 +14,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../style/style.css">
-        <title>Admin Login</title>
+        <title>Admin login</title>
     </head>
 
     <body>
@@ -24,7 +32,6 @@
                     <span>LOGIN</span>
                 </a>
             </nav>
-
         
             <form action="validate_admin.php" method="post">
                 <h1>Admin Login</h1>
@@ -39,7 +46,7 @@
                         <input class="textinput" type="password" name="user_password" id="user_password" placeholder="Password" required>
                     </p>
                     <p class="submitbtn">
-                        <input class="login_submit" type="submit" name="login" value="Login">
+                        <button class="login_submit" type="submit" name="login">Login</button>
                     </p>
                 </div>
             </form>

@@ -18,7 +18,7 @@
         $users = $users_table->read();
 
         while ($user = $users->fetch()){
-            if(($user['user_email'] == $user_email) &&
+            if (($user['user_email'] == $user_email) &&
                 ($user['user_password'] == $user_password) && $user['type'] == 2) {
                     setcookie("Admin",$user_email, time() + 300, '/');
                     header("Location: dashboard.php");

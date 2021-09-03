@@ -1,9 +1,9 @@
 <?php
-require_once("/var/www/html/php/services_db.php");
-require_once("/var/www/html/php/items_db.php");
-require_once("/var/www/html/php/users_db.php");
-$services = $services_table->read();
-$items = $items_table->read();
+    require_once("/var/www/html/php/services_db.php");
+    require_once("/var/www/html/php/items_db.php");
+    require_once("/var/www/html/php/users_db.php");
+    $services = $services_table->read();
+    $items = $items_table->read();
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ $items = $items_table->read();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Used Electronics</title>
     <meta name="desription" content="Shop for used electronics, repair service and resale.">

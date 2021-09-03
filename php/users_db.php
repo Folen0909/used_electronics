@@ -23,7 +23,7 @@
 
             $this->createTableIfNotExist();
 
-            if(count($this->read()->fetchAll()) == 0) {
+            if (count($this->read()->fetchAll()) == 0) {
                 $this->insert("admin@admin.com", "admin123", 2);
             }
         }
