@@ -94,3 +94,69 @@ nav span {
     letter-spacing: 0.2px;
     color: var(--text);
 }
+
+/* About us */
+
+.about {
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--secondary);
+    margin: 10px;
+}
+.about span {
+    color: var(--text);
+    font-size: 48px;
+    margin: 10px;
+}
+
+.about li {
+    color: var(--text);
+    font-size: 24px;
+    margin: 10px;
+}
+
+/* Prices */
+
+.services {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary);
+    margin: 10px;
+}
+
+.services span {
+    font-size: 42px;
+    padding: 10px;
+    color: var(--text);
+}
+
+.servicing {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.servicing span {
+    font-size: 24px;
+    color: var(--text);
+}
+
+.service {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--accent);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px 5px 5px 5px;
+}
+
+.service span {
+    font-weight: bold;
+    color: var(--text);
+}
+
+.service-img {
+    width: 400px;
+    height: 400px;
+}
