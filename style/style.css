@@ -401,3 +401,77 @@ form p {
     line-height: 64px;
     letter-spacing: 0.08em;
 }
+
+/* Services and Items */
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+}
+
+.addbtn {
+    align-self: center;
+    height: 40px;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    background: var(--accent);
+    color: var(--text);
+    border: none;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.addbtn:hover {
+    background: var(--button);
+    color: var(--primary);
+}
+
+.table {
+    border: 2px solid var(--accent);
+    background-color: var(--secondary);
+    border-collapse: collapse;
+}
+
+.table th, td, tr {
+    color: var(--text);
+    text-align: center;
+    font-size: 26px;
+    border: 1px solid var(--accent);
+    align-items: center;
+}
+
+.table td {
+    overflow: auto;
+    height: auto;
+    padding: 0 10px 0 10px;
+}
+
+.table tr {
+    border: 1px solid var(--accent);
+}
+
+.table img {
+    align-self: center;
+    padding: 10px;
+    max-width: 250px;
+    max-height: 250px;
+    aspect-ratio: auto;
+}
+
+.table .name {
+    text-align: start;
+}
+
+.editbtn {
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 18px;
+    background: var(--accent);
+    color: var(--text);
+    border: none;
+}
