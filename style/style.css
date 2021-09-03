@@ -206,3 +206,53 @@ nav span {
     width: 400px;
     height: 400px;
 }
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+}
+
+.media-icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding-inline-start: 0;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    padding-inline-start: 0;
+}
+
+.links li {
+    margin: 10px;
+}
+
+footer span {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--text)
+}
+
+footer a {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--text);
+}
+
+footer a:focus {
+    outline: 3px solid #000000;
+}
+
+/* End of index */
