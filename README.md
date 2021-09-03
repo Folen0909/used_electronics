@@ -2,6 +2,8 @@
 
 ### Heroku LINK: 
 
+https://used-electronics.herokuapp.com/
+
 <hr />
 
 ## Opis zadatka
