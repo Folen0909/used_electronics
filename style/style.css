@@ -343,3 +343,61 @@ form p {
     background: var(--button);
     color: var(--primary);
 }
+
+/* Dashboard */
+
+.dashboard {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: var(--primary);
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: var(--secondary);
+    text-align: center;
+    border-right: 1px solid var(--accent);
+}
+
+.sidenav span {
+    font-size: 36px;
+    color: var(--text);
+    margin: 10px;
+}
+
+.sidenav a {
+    text-decoration: none;
+    background-color: var(--accent);
+    color: var(--text);
+    margin: 10px;
+    padding: 20px;
+    letter-spacing: 0.05em;
+}
+
+.details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.details span {
+    color: var(--text);
+    font-size: 72px;
+    text-decoration: underline var(--accent);
+    font-weight: 300;
+    line-height: 82px;
+}
+
+.details .info {
+    color: var(--text);
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 64px;
+    letter-spacing: 0.08em;
+}
