@@ -1,0 +1,42 @@
+/* General */
+
+:root {
+    --primary: #0b132bff;
+    --secondary: #1c2541ff;
+    --accent: #3a506bff;
+    --text: #5bc0beff;
+    --button: #ffffffff;
+
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--primary);
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;   
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+section {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1, h2 {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
