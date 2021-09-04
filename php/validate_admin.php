@@ -1,6 +1,6 @@
 <?php
  
-    include_once('users_db.php');
+    include_once('./users_db.php');
     
     function test_input($data) {
         

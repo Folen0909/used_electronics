@@ -4,7 +4,7 @@
         header("Location: admin.php");
     }
 
-    include_once('items_db.php');
+    include_once('./items_db.php');
 
     function test_input($data)
     {

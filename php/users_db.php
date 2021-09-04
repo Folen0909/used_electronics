@@ -1,7 +1,7 @@
 <?php
 
-    if (file_exists("dbconfig.php")) {
-        include_once("dbconfig.php");
+    if (file_exists("./dbconfig.php")) {
+        include_once("./dbconfig.php");
     }
 
     if (file_exists("./php/dbconfig.php")) {
