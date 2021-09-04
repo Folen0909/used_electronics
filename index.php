@@ -1,7 +1,7 @@
 <?php
-    require_once("/var/www/html/php/services_db.php");
-    require_once("/var/www/html/php/items_db.php");
-    require_once("/var/www/html/php/users_db.php");
+    require_once("./php/services_db.php");
+    require_once("./php/items_db.php");
+    require_once("./php/users_db.php");
     $services = $services_table->read();
     $items = $items_table->read();
 ?>
