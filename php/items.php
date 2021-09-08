@@ -40,6 +40,12 @@
                     onClick="document.location.href = './new_item.php'">New item</button>
             </div>
 
+            <?php if (isset($_COOKIE["Error"])) : ?>
+                <div class="error">
+                    <p>Polje nije popunjeno!</p>
+                </div>
+            <?php endif; ?>
+
             <table class="table">
                 <tr>
                     <th scope="col" width="35%">Image</th>

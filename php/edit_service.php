@@ -50,7 +50,7 @@
             <form action="validate_edit_service.php" method="post">
                 <p style="display:none;">
                     <label for="text">ID: </label>
-                    <input type="text" name="service_id" id="service_id" value="<?php echo $service_id?>">
+                    <input type="text" name="service_id" id="service_id" value="<?php echo $service_id?>" required>
                 </p>
                 <p>
                     <label for="text">Name: </label>

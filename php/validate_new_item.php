@@ -16,7 +16,8 @@
         $item_price = test_input($_POST["item_price"]);
 
         if ($item_name == "" || $item_price == "") {
-            echo "<script type='text/javascript'>alert('Empty name or price'); window.location='new_item.php';</script>";  
+            setcookie("Error", true, time() + 10);
+            header("Location: new_item.php"); 
         } else {
             $items_table->insert($item_name, $item_url, $item_price);
             header("Location: items.php");

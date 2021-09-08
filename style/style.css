@@ -6,7 +6,7 @@
     --accent: #3a506bff;
     --text: #5bc0beff;
     --button: #ffffffff;
-
+    --error: rgba(255, 0, 0, 0.2);
 }
 
 html, body {
@@ -474,4 +474,11 @@ form p {
     background: var(--accent);
     color: var(--text);
     border: none;
+}
+
+.error p {
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.2);;
+    border: 2px solid red;
+    padding: 5px;
 }

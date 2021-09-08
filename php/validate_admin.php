@@ -24,7 +24,8 @@
                     header("Location: dashboard.php");
             }
             else {
-                echo "<script type='text/javascript'>alert('Wrong Username or Password'); window.location='admin.php';</script>";
+                setcookie("Error", true, time() + 10);
+                header('Location: admin.php');
             }
         }
     }

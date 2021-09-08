@@ -10,10 +10,10 @@
 <html land="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../style/style.css">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../style/style.css" />
         <title>Admin login</title>
     </head>
 
@@ -36,6 +36,13 @@
             <form action="validate_admin.php" method="post">
                 <h1>Admin Login</h1>
                 <span>Admin login</span>
+                
+                <?php if (isset($_COOKIE["Error"])) : ?>
+                    <div class="error">
+                        <p>E-mail ili lozinka kriva!</p>
+                    </div>
+                <?php endif; ?>
+
                 <div>
                     <p>
                         <label for="username">E-mail: </label>

@@ -16,9 +16,12 @@
         $item_url = test_input($_POST["item_image_url"]);
         $item_price = test_input($_POST["item_price"]);
 
+        if ($item_id == "" || $item_name == "" || $item_price == "") {
+            setcookie("Error", true, time() + 10);
+            header('Location: service.php');
+        }
         if (isset($_POST['update'])){
-            $items_table-> deleteByID($item_id);
-            $items_table-> insert($item_name, $item_url, $item_price);
+            $items_table-> update($item_id, $item_name, $item_url, $item_price);
             header('Location: items.php');
         }
         elseif (isset($_POST['delete'])){

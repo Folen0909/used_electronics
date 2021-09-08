@@ -55,6 +55,28 @@
     
             $this->conn->exec($sql);
         }
+
+        public function update($service_id, $service_name, $service_price) {
+            $todoTask = array(
+                ':service_id' => $service_id,
+                ':service_name' => $service_name,
+                ':service_price' => $service_price
+            );
+    
+            $sql = <<<EOSQL
+                UPDATE $this->tableName
+                SET service_name = :service_name, service_price = :service_price
+                WHERE service_id = :service_id;
+            EOSQL;
+    
+            $query = $this->conn->prepare($sql);
+    
+            try {
+                $query->execute($todoTask);
+            } catch (Exception $e) {
+                echo $e->getMessage();
+            }
+        }
     
         public function insert($service_name, $service_price) {
             $todoTask = array(
@@ -62,9 +84,8 @@
                 ':service_price' => $service_price
             );
     
-    
             $sql = <<<EOSQL
-                INSERT INTO  $this->tableName(service_name, service_price) VALUES(:service_name, :service_price);
+                INSERT INTO $this->tableName(service_name, service_price) VALUES(:service_name, :service_price);
             EOSQL;
     
             $query = $this->conn->prepare($sql);

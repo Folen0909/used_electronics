@@ -52,7 +52,7 @@
             <form action="validate_edit_item.php" method="post">
                 <p style="display:none;">
                     <label for="text">ID: </label>
-                    <input type="text" name="item_id" id="item_id" value="<?php echo $item_id ?>">
+                    <input type="text" name="item_id" id="item_id" value="<?php echo $item_id ?>" required>
                 </p>
                 <p>
                     <label for="text">Name: </label>

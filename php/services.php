@@ -39,6 +39,12 @@
                 <input class="addbtn" type="button" value="New Service" onClick="document.location.href = './new_service.php'" />
             </div>
 
+            <?php if (isset($_COOKIE["Error"])) : ?>
+                <div class="error">
+                    <p>Polje nije popunjeno!</p>
+                </div>
+            <?php endif; ?>
+
             <table class="table">
                 <tr>
                     <th scope="col">Name</th>

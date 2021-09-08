@@ -14,7 +14,8 @@
         $service_price = test_input($_POST["service_price"]);
 
         if ($service_name == "" || $service_price == "") {
-            echo "<script type='text/javascript'>alert('Empty name or price'); window.location='new_service.php';</script>";  
+            setcookie("Error", true, time() + 10);
+            header("Location: new_services.php");
         } else {
             $services_table->insert($service_name, $service_price);
             header("Location: services.php");

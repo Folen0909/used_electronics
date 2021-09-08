@@ -53,6 +53,30 @@
     
             $this->conn->exec($sql);
         }
+
+        public function update($item_id, $item_name, $item_image_url, $item_price) {
+            $todoTask = array(
+                ':item_id' => $item_id,
+                ':item_name' => $item_name,
+                ':item_image_url' => $item_image_url,
+                ':item_price' => $item_price
+            );
+    
+            $sql = <<<EOSQL
+                UPDATE $this->tableName
+                SET item_name = :item_name, item_image_url = :item_image_url, item_price = :item_price
+                WHERE item_id = :item_id;
+            EOSQL;
+    
+            $query = $this->conn->prepare($sql);
+    
+            try {
+                $query->execute($todoTask);
+                // echo "Inserted !";
+            } catch (Exception $e) {
+                echo $e->getMessage();
+            }
+        }
     
         public function insert($item_name, $item_image_url, $item_price) {
             $todoTask = array(
@@ -60,7 +84,6 @@
                 ':item_image_url' => $item_image_url,
                 ':item_price' => $item_price
             );
-    
     
             $sql = <<<EOSQL
                 INSERT INTO  $this->tableName(item_name, item_image_url, item_price) VALUES(:item_name, :item_image_url, :item_price);

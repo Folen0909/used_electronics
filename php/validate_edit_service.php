@@ -13,12 +13,14 @@
 
         $service_id = test_input($_POST["service_id"]);
         $service_name = test_input($_POST["service_name"]);
-        $service_url = test_input($_POST["service_image_url"]);
         $service_price = test_input($_POST["service_price"]);
 
+        if ($service_id == "" || $service_name == "" || $service_price == "") {
+            setcookie("Error", true, time() + 10);
+            header('Location: service.php');
+        }
         if (isset($_POST['update'])){
-            $services_table-> deleteByID($service_id);
-            $services_table-> insert($service_name, $service_price);
+            $services_table-> update($service_id, $service_name, $service_price);
             header('Location: services.php');
         }
         elseif (isset($_POST['delete'])){
