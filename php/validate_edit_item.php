@@ -18,7 +18,7 @@
 
         if ($item_id == "" || $item_name == "" || $item_price == "") {
             setcookie("Error", true, time() + 10);
-            header('Location: service.php');
+            header('Location: items.php');
         }
         if (isset($_POST['update'])){
             $items_table-> update($item_id, $item_name, $item_url, $item_price);

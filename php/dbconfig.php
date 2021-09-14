@@ -2,9 +2,9 @@
 
     final class DBConfig {
         const HOST = 'sql11.freesqldatabase.com';
-        const DB_NAME = 'sql11434588';
-        const USERNAME = 'sql11434588';
-        const PASS = 'vFvMSxLV1G';
+        const DB_NAME = 'sql11437147';
+        const USERNAME = 'sql11437147';
+        const PASS = '331GM97xGB';
     }
 
 ?>
